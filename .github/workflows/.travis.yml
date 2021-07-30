@@ -1,18 +1,44 @@
-language: node_js
-node_js:
-  - lts/*
-install:
-  - yarn install # npm ci
-script:
-  - yarn docs:build # npm run docs:build
-deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: docs/.vitepress/dist
-  branch: docs/.vitepress/dist
-  # A token generated on GitHub allowing Travis to push code on you repository.
-  # Set in the Travis settings page of your repository, as a secure variable.
-  github_token: ${{ secrets.GITHUB_TOKEN }}
-  keep_history: true
-  on:
-    branch: master
+# language: node_js
+# node_js:
+#   - lts/*
+# install:
+#   - yarn install # npm ci
+# script:
+#   - yarn docs:build # npm run docs:build
+# deploy:
+#   provider: pages
+#   skip_cleanup: true
+#   local_dir: docs/.vitepress/dist
+#   branch: docs/.vitepress/dist
+#   # A token generated on GitHub allowing Travis to push code on you repository.
+#   # Set in the Travis settings page of your repository, as a secure variable.
+#   github_token: ${{ secrets.GITHUB_TOKEN }}
+#   keep_history: true
+#   on:
+#     branch: master
+
+name: VitePress
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: npm ci # 相当于npm install
+    - run: npm run docs:build
+
+    #发布到mybells.github.io/master
+    - name: Deploy parishappytime.github.io/master
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        EXTERNAL_REPOSITORY: parishappytime/parishappytime.github.io #可以新建一个mybells.github.io仓库发布到master
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: docs/.vitepress/dist
+      with:
+          emptyCommits: false
