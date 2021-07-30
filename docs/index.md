@@ -9,7 +9,7 @@ editLink: true
 
 [[toc]]
 
-::: tip2-tip2tip2tip2
+::: t2
 This is a tip
 :::
 
