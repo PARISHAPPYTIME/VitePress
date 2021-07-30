@@ -1,53 +1,17 @@
-name: VitePress
-
-on:
-  push:
-    branches:
-    - master
-
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    #发布到mybells.github.io/master
-    - name: Deploy parishappytime.github.io/VitePress
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.VITEPRESS }}
-        EXTERNAL_REPOSITORY: parishappytime/parishappytime.github.io #可以新建一个mybells.github.io仓库发布到master
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: docs/.vitepress/dist
-      with:
-          emptyCommits: false
-
-name: Deploy GitHub Pages
-
-# 触发条件：在 push 到 master 分支后
-on:
-  push:
-    branches:
-      - master
-
-# 任务
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-
-      - name: install
-        run: yarn install
-
-      - name: Build
-        run:  yarn docs:build
-
-      - name: Deploy
-        uses: PARISHAPPYTIME/VitePress/master
-        # uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.VITEPRESS }}
-          REPOSITORY_NAME: parishappytime/parishappytime.github.io
-          BRANCH: master
-          FOLDER: public
+language: node_js
+node_js:
+  - lts/*
+install:
+  - yarn install # npm ci
+script:
+  - yarn docs:build # npm run docs:build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs/.vitepress/dist
+  # A token generated on GitHub allowing Travis to push code on you repository.
+  # Set in the Travis settings page of your repository, as a secure variable.
+  github_token: $VITEPRESS
+  keep_history: true
+  on:
+    branch: master
