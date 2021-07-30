@@ -4,6 +4,7 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
+    base: 'VitePress',
     // 主题配置
     themeConfig: {
         //   头部导航
