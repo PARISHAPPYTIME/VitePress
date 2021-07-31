@@ -14,11 +14,11 @@ jobs:
 
       - name: install and build
         run: |
-          yarn
-          yarn docs:build
+          npm ci
+          npm run docs:build
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: peaceiris/actions-gh-pages@v2.5.0
         with:
           GITHUB_TOKEN: ${{ secrets.VITEPRESS }}
           BRANCH: gh-pages
