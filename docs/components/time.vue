@@ -8,7 +8,5 @@ import dayjs from 'dayjs'
 
 const time = ref(0)
 
-setInterval(() => {
-    time.value = dayjs().format('YYYY-MM-DD hh:mm:ss')
-}, 1000)
+time.value = dayjs().format('YYYY-MM-DD hh:mm:ss')
 </script>
