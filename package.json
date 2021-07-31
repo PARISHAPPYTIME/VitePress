@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vitepress": "^0.15.6"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.6"
   }
 }

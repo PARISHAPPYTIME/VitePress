@@ -3,6 +3,15 @@ title: Docs with VitePress
 editLink: true
 ---
 
+<script setup>
+import HelloWorld from './components/HelloWorld.vue';
+import Time from './components/time.vue'
+</script>
+
+<HelloWorld />
+<Time />
+
+
 ![An image](./lib/a1.png)
 
 :tada: :100:
@@ -10,7 +19,7 @@ editLink: true
 [[toc]]
 
 ::: warning
-This is a tip3333
+这是新的页面
 :::
 
 ::: warning
@@ -33,10 +42,6 @@ Danger zone, do not proceed
 - 5848
 - 89898
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 ```javascript {1}
 export default defineComponent {
     name: 'HelloWorld',
@@ -49,5 +54,3 @@ export default defineComponent {
 ```
 
 <<< @/lib/test.js
-
-<HelloWorld />
