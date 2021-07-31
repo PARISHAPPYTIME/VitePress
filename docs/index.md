@@ -5,10 +5,11 @@ editLink: true
 
 <script setup>
 import HelloWorld from './components/HelloWorld.vue';
+import Times from './components/time.vue';
 </script>
 
 <HelloWorld />
-
+<Times />
 
 ![An image](./lib/a1.png)
 
