@@ -6,7 +6,8 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs --port 8080"
+    "docs:serve": "vitepress serve docs --port 8080",
+    "deploy-gh": "yarn docs:build && sh scripts/deploy-gh.sh"
   },
   "devDependencies": {
     "vitepress": "^0.15.6"
