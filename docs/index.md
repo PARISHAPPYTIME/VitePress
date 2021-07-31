@@ -20,7 +20,7 @@ import HelloWorld from './components/HelloWorld.vue';
 这是新的页面
 :::
 
-::: warning
+::: danger
 This is a warning
 :::
 
@@ -28,7 +28,7 @@ This is a warning
 This is a dangerous warning
 :::
 
-::: danger STOP
+::: danger
 Danger zone, do not proceed
 :::
 
