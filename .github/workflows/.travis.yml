@@ -18,7 +18,7 @@ jobs:
           npm run docs:build
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2.5.0
+        uses: JamesIves/github-pages-deploy-action@3.5.9
         with:
           GITHUB_TOKEN: ${{ secrets.VITEPRESS }}
           BRANCH: gh-pages

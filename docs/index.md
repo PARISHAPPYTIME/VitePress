@@ -5,11 +5,9 @@ editLink: true
 
 <script setup>
 import HelloWorld from './components/HelloWorld.vue';
-import Time2 from './components/time.vue'
 </script>
 
 <HelloWorld />
-<Time2 />
 
 
 ![An image](./lib/a1.png)
