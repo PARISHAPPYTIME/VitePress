@@ -14,22 +14,12 @@ import HelloWorld from './components/HelloWorld.vue';
 
 :tada: :100:
 
-[[toc]]
-
 ::: warning
-这是新的页面
+warning
 :::
 
 ::: danger
-This is a warning
-:::
-
-::: danger
-This is a dangerous warning
-:::
-
-::: danger
-Danger zone, do not proceed
+danger
 :::
 
 # {{ $frontmatter.title }}
