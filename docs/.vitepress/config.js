@@ -10,7 +10,7 @@ module.exports = {
         //   头部导航
         nav: [
             { text: '首页', link: '/' },
-            { text: '关于', link: '/about/' },
+            { text: 'Redux', link: '/redux-start' },
         ],
         //   侧边导航
         sidebar: [
