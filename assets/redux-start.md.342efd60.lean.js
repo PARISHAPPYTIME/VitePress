@@ -1,0 +1,1 @@
+import{o as n,c as s,e as a}from"./app.d33ee789.js";const p='{"title":"Redux","description":"","frontmatter":{},"relativePath":"redux-start.md","lastUpdated":1628058050229}',t={},o=a('',2);t.render=function(a,p,t,e,c,u){return n(),s("div",null,[o])};export default t;export{p as __pageData};
