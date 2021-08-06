@@ -21,6 +21,8 @@
 
 + [【探索学习】esbuild -面向未来最快的打包器](https://www.bilibili.com/video/BV1nA41137jT)
 
++ [Remote Repositories vscode 神器，不用把代码下载到本地](https://www.bilibili.com/video/BV1U64y1t7TH)
+
 ## `instrument`
 
 + [将代码解析成抽象语法树 @babel/parser ](https://astexplorer.net/)
