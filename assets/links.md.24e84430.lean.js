@@ -1,0 +1,1 @@
+import{o as e,c as r,e as a}from"./app.2f15e172.js";const h='{"title":"Import","description":"","frontmatter":{},"headers":[{"level":2,"title":"知识","slug":"知识"},{"level":2,"title":"工具","slug":"工具"}],"relativePath":"links.md","lastUpdated":1628242872586}',t={},n=a('',12);t.render=function(a,h,t,i,d,s){return e(),r("div",null,[n])};export default t;export{h as __pageData};
