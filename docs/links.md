@@ -19,6 +19,8 @@
 
     - 前端自动化测试 vite + vue + cypress
 
++ [【探索学习】esbuild -面向未来最快的打包器](https://www.bilibili.com/video/BV1nA41137jT)
+
 ## `instrument`
 
 + [将代码解析成抽象语法树 @babel/parser ](https://astexplorer.net/)
