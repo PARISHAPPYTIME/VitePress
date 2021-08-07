@@ -10,6 +10,7 @@ module.exports = {
         ],
         //   侧边导航
         sidebar: [
+            { text: '测试 Markdown', link: '/test' },
             { text: 'Redux', link: '/redux-start' },
             { text: 'Other Links', link: '/links' }
         ]
